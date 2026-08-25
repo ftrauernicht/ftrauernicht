@@ -17,9 +17,12 @@ and the human one: finding the ideas worth pursuing, turning them into plans, bu
 the team, watching the work closely enough to catch it drifting early, and keeping the whole
 thing structured enough that people could do good work without waiting on me.
 
-The people part mattered more than the org chart suggested. A team that will tell you your idea
-is wrong is worth considerably more than one that agrees with you, and you earn that by how you
-react the first few times it happens, not by saying you welcome it.
+The people part mattered more to me than the org chart suggested — how well a team actually
+gets on, and whether criticism travels freely in both directions. A team that will tell you your
+idea is wrong is worth considerably more than one that agrees with you, and you earn that by how
+you react the first few times it happens, not by saying you welcome it. I know reasonably well
+what I am good at; I have found it more useful to know precisely where I am not, and who is
+better at it than I am.
 
 It is also what changed how I engineer. When you are still there three years later maintaining
 the thing you decided, architecture stops being an aesthetic argument.
@@ -32,8 +35,8 @@ cost structure, and I can make that case to the people who have to sign for it.
 
 ### Architecture
 
-I have shipped monoliths, modular monoliths, and microservices, and I have inherited all three
-from other people. The interesting question is almost never which style is best — it is which
+I have built monoliths, modular monoliths, and microservices, and I have taken over my share of
+each from someone else. The interesting question is almost never which style is best — it is which
 constraints the system actually has: team size, release cadence, transactional boundaries, the
 blast radius of a bad deploy, and what the organisation can realistically operate at three in
 the morning. I choose on that basis and write the reasoning down, because the next engineer has
@@ -44,12 +47,12 @@ modernisation work is archaeology first and engineering second.
 
 ### Running systems
 
-Much of what I ship runs on customer infrastructure rather than a managed platform — regulated
-industries, on-premises networks, environments where data is not allowed to leave the building.
-Nothing there quietly takes care of backups, certificates, monitoring, or failover on your
-behalf; that layer is yours to build and yours to answer for. Containers and orchestration are
-what make those environments tractable, and they are the reason the same artefact can be run by
-a customer's operations team and by me.
+Some of what I build runs in the cloud and some of it runs on customer infrastructure —
+regulated industries, on-premises networks, environments where the data is not allowed to leave
+the building. The second kind teaches you what the first kind hides: nothing there quietly takes
+care of backups, certificates, monitoring, or failover on your behalf, and that layer is yours to
+build and yours to answer for. Containers and orchestration are what let the same artefact be run
+by a customer's operations team and by me.
 
 The failures I look for are the ones that produce no error at all: the transfer that stalls
 instead of failing, the retry that quietly loses a message, the restore path nobody has ever
@@ -92,14 +95,14 @@ it is only useful if someone can pick it up and get moving without me in the roo
 
 - **Languages** — C#, TypeScript and JavaScript, Python, SQL, PowerShell, Bash
 - **.NET** — ASP.NET Core, Entity Framework Core, Avalonia, xUnit
-- **Data** — SQL Server, PostgreSQL, Firebird
-- **Operations** — Docker, Kubernetes, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
+- **Data** — SQL Server, PostgreSQL
+- **Operations** — Docker, Kubernetes, cloud and on-premises deployments, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
 - **Practice** — automated and architecture testing, code review, penetration testing, threat modelling, technical documentation
 
 ### Availability
 
-Based in East Frisia, working remotely, and happy to travel for the parts of a project that
-genuinely need a room and a whiteboard. Open to conversations about senior engineering,
-architecture, and modernisation work.
+Remote by default, from East Frisia in northern Germany. I travel when a piece of work genuinely
+needs everyone in the same room, and I would rather make that call deliberately than out of
+habit. Open to conversations about senior engineering, architecture, and modernisation work.
 
 [LinkedIn](https://www.linkedin.com/in/frank-trauernicht/) · [XING](https://www.xing.com/profile/Frank_Trauernicht/)
