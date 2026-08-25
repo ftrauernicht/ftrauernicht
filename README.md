@@ -13,10 +13,11 @@ platforms without stopping the business, and the delivery tooling around both.
 
 ### Seven years running a company
 
-My half of running it was the technical and the human one: finding the ideas worth pursuing, turning them into plans, building alongside the
-team, and keeping things structured enough that people could work without waiting on me. It also
-changed how I engineer — when you are still there three years later maintaining what you decided,
-architecture stops being an aesthetic argument.
+My half of running the company was the technical and the human one: finding the ideas worth
+pursuing, turning them into plans, building alongside the team, and keeping things structured
+enough that people could work without waiting on me. It also changed how I engineer — when you
+are still there three years later maintaining what you decided, architecture stops being an
+aesthetic argument.
 
 The people part mattered more to me than the org chart suggested: whether a team actually gets
 on, and whether criticism travels in both directions. A team that will tell you your idea is
