@@ -12,14 +12,21 @@ that generalises — templates, patterns, and teaching material stripped of anyt
 
 ### Seven years running a company
 
-I founded and ran a software company for seven years: hiring and paying the team, winning the
-customers, setting the technical direction, and carrying the consequences of all three. It is
-the single experience that changed how I engineer. When the maintenance cost of a shortcut
-lands on your own budget three years later, architecture stops being an aesthetic argument.
+For seven years I ran a software company of my own, and my half of that job was the technical
+and the human one: finding the ideas worth pursuing, turning them into plans, building alongside
+the team, watching the work closely enough to catch it drifting early, and keeping the whole
+thing structured enough that people could do good work without waiting on me.
 
-I went back to engineering full time by choice, and the commercial half of the job came with
-me: estimates that hold, scope that can be cut without the thing collapsing, and a straight
-answer about what something will actually cost to run.
+The people part mattered more than the org chart suggested. A team that will tell you your idea
+is wrong is worth considerably more than one that agrees with you, and you earn that by how you
+react the first few times it happens, not by saying you welcome it.
+
+It is also what changed how I engineer. When you are still there three years later maintaining
+the thing you decided, architecture stops being an aesthetic argument.
+
+I went back to engineering full time by choice, and the planning half of that role came with me:
+estimates that hold, scope that can be cut without the thing collapsing, and the habit of saying
+out loud when a plan has stopped matching reality instead of hoping it recovers.
 
 ### Architecture
 
