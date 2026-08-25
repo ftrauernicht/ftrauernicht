@@ -33,14 +33,27 @@ to be able to disagree with it on the evidence.
 I have also spent enough time in codebases where that reasoning was never written down. Most
 modernisation work is archaeology first and engineering second.
 
-### Reliability
+### Running systems
 
-A system that only works while someone watches it is not finished. What I look for is the
-failure that produces no error at all: the transfer that stalls instead of failing, the retry
-that quietly loses a message, the restore path nobody has ever executed. The Raspberry Pi
-backup project below is deliberately extreme — single-core ARMv6, 512 MB RAM, unattended for
-years — because tight constraints make those failure modes visible where a generously
-provisioned environment hides them.
+Much of what I ship runs on customer infrastructure rather than a managed platform — regulated
+industries, on-premises networks, environments where data is not allowed to leave the building.
+Nothing there quietly takes care of backups, certificates, monitoring, or failover on your
+behalf; that layer is yours to build and yours to answer for. Containers and orchestration are
+what make those environments tractable, and they are the reason the same artefact can be run by
+a customer's operations team and by me.
+
+The failures I look for are the ones that produce no error at all: the transfer that stalls
+instead of failing, the retry that quietly loses a message, the restore path nobody has ever
+executed. The Raspberry Pi backup project below is deliberately extreme — single-core ARMv6,
+512 MB RAM, unattended for years — because tight constraints make those failure modes visible
+where a generously provisioned environment hides them.
+
+### Security
+
+Penetration testing and security reviews of applications, including mobile, that I did not
+write myself, plus tooling that scans systems for privacy and GDPR exposure. Reviewing other
+people's software adversarially is the fastest way I know to stop writing certain classes of
+bug in my own.
 
 ### AI-assisted development
 
@@ -51,7 +64,7 @@ scanning, a diff a human can still review. Automation that cannot be verified is
 
 ### Teaching
 
-I trained apprentices for years, several of whom finished top of their class, and I mentored
+I trained apprentices for years, several of whom finished top of their class, and mentored
 developers as a team lead. The material I write is public for the same reason it worked then:
 it is only useful if someone can pick it up and get moving without me in the room.
 
@@ -68,12 +81,16 @@ it is only useful if someone can pick it up and get moving without me in the roo
 
 ### Tools
 
-**Languages** C#, TypeScript and JavaScript, Python, SQL, PowerShell, Bash
-**.NET** ASP.NET Core, Entity Framework Core, Avalonia, xUnit
-**Data** SQL Server, PostgreSQL, Firebird
-**Delivery** Docker, GitHub Actions, Azure DevOps Pipelines, trunk-based Git workflows
-**Practice** automated and architecture testing, code review, threat modelling, technical documentation
+- **Languages** — C#, TypeScript and JavaScript, Python, SQL, PowerShell, Bash
+- **.NET** — ASP.NET Core, Entity Framework Core, Avalonia, xUnit
+- **Data** — SQL Server, PostgreSQL, Firebird
+- **Operations** — Docker, Kubernetes, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
+- **Practice** — automated and architecture testing, code review, penetration testing, threat modelling, technical documentation
 
-### Contact
+### Availability
+
+Based in East Frisia, working remotely, and happy to travel for the parts of a project that
+genuinely need a room and a whiteboard. Open to conversations about senior engineering,
+architecture, and modernisation work.
 
 [LinkedIn](https://www.linkedin.com/in/frank-trauernicht/) · [XING](https://www.xing.com/profile/Frank_Trauernicht/)
