@@ -35,8 +35,10 @@ cost structure, and I can make that case to the people who have to sign for it.
 
 ### Architecture
 
-I have built monoliths, modular monoliths, and microservices, and I have taken over my share of
-each from someone else. The interesting question is almost never which style is best — it is which
+Monolith, modular monolith, microservices, and everything improvised in between: these
+structures exist, and you rarely get to choose which one is in front of you. The work is being
+able to handle whichever it turns out to be — the one you designed as much as the one you
+inherited. The interesting question is almost never which style is best — it is which
 constraints the system actually has: team size, release cadence, transactional boundaries, the
 blast radius of a bad deploy, and what the organisation can realistically operate at three in
 the morning. I choose on that basis and write the reasoning down, because the next engineer has
