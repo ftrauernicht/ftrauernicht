@@ -42,8 +42,9 @@ inherited.
 
 Which style is best is rarely the interesting question. What matters is the constraints the
 system actually has: team size, release cadence, transactional boundaries, the blast radius of
-a bad deploy, and what the organisation can realistically operate at three in the morning. I choose on that basis and write the reasoning down, because the next engineer has
-to be able to disagree with it on the evidence.
+a bad deploy, and what the organisation can realistically operate at three in the morning. I
+choose on that basis and write the reasoning down, because the next engineer has to be able to
+disagree with it on the evidence.
 
 I have also spent enough time in codebases where that reasoning was never written down. Most
 modernisation work is archaeology first and engineering second.
