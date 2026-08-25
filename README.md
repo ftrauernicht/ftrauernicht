@@ -26,7 +26,9 @@ the thing you decided, architecture stops being an aesthetic argument.
 
 I went back to engineering full time by choice, and the planning half of that role came with me:
 estimates that hold, scope that can be cut without the thing collapsing, and the habit of saying
-out loud when a plan has stopped matching reality instead of hoping it recovers.
+out loud when a plan has stopped matching reality instead of hoping it recovers. Seven years
+of sitting where the numbers land also left me able to read them: a technical decision is a
+cost structure, and I can make that case to the people who have to sign for it.
 
 ### Architecture
 
