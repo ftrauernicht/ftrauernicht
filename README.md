@@ -1,6 +1,6 @@
 ## Frank Trauernicht
 
-**Senior software engineer — C# and .NET since 2011 — Aurich, Germany**
+**Senior software engineer · C# and .NET since 2011 · Aurich, Germany**
 
 - Architecture and modernisation of long-lived line-of-business systems
 - Apprentice, engineer, head of a twelve-person development team
@@ -15,7 +15,7 @@ platforms without stopping the business, and the delivery tooling around both.
 
 My half of running the company was the technical and the human one: finding the ideas worth
 pursuing, turning them into plans, building alongside the team, and keeping things structured
-enough that people could work without waiting on me. It also changed how I engineer — when you
+enough that people could work without waiting on me. It also changed how I engineer. When you
 are still there three years later maintaining what you decided, architecture stops being an
 aesthetic argument.
 
@@ -32,7 +32,7 @@ technical decision is a cost structure, and I can make that case to the people w
 
 Monolith, modular monolith, microservices, and everything improvised in between: these
 structures exist, and you rarely get to choose which one is in front of you. The work is being
-able to handle whichever it turns out to be — the one you designed as much as the one you
+able to handle whichever it turns out to be: the one you designed as much as the one you
 inherited.
 
 Which style is best is rarely the interesting question. What matters is the constraints the
@@ -45,7 +45,7 @@ modernisation work is archaeology first and engineering second.
 
 ### Running systems
 
-Some of what I build runs in the cloud, some on customer infrastructure — regulated industries,
+Some of what I build runs in the cloud, some on customer infrastructure: regulated industries,
 on-premises networks, environments where the data is not allowed to leave the building. The
 second teaches you what the first hides: nothing there quietly handles backups, certificates,
 monitoring, or failover for you. Containers and orchestration are what let the same artefact
@@ -65,7 +65,7 @@ adversarially is the fastest way I know to stop writing certain classes of bug i
 ### AI-assisted development
 
 The question worth answering about LLM tooling is not whether a model can write the change; it
-is what has to be true before that change is allowed to merge — architecture tests, coverage
+is what has to be true before that change is allowed to merge: architecture tests, coverage
 gates, secret scanning, a diff a human can still review. Automation that cannot be verified is
 not automation.
 
@@ -78,26 +78,26 @@ can pick it up and get moving without me in the room.
 ### Selected repositories
 
 Most of my work lives in private and customer repositories. What is public is the part that
-generalises — templates, patterns, and teaching material stripped of anything specific.
+generalises: templates, patterns, and teaching material stripped of anything specific.
 
 | Repository | What it is |
 |---|---|
 | [dotnet-architecture-hexagonal-template](https://github.com/ftrauernicht/dotnet-architecture-hexagonal-template) | A .NET 10 setup taken far enough to be honest about the cost: the dependency rule enforced by architecture tests, xUnit v3 and Reqnroll, Central Package Management, and a five-stage CI/CD pipeline on SHA-pinned workflows. |
 | [javascript-course](https://github.com/ftrauernicht/javascript-course) | Project-based JavaScript course for beginners and apprentices, German and English side by side, building from the browser console up to a GUI calculator, quiz, and memory game. |
 | [raspi-google-drive-sync](https://github.com/ftrauernicht/raspi-google-drive-sync) | Unattended backup on deliberately weak hardware: read-only OAuth, copy instead of sync, a watchdog for stalled transfers, and a disk layout that stays readable when the machine running it is gone. |
-| [ha-automation-cookbook](https://github.com/ftrauernicht/ha-automation-cookbook) | Home Assistant patterns written to be reused and read, one per folder — alongside sun-aware cover control that yields to manual override and time-in-zone statistics computed in SQL. |
+| [ha-automation-cookbook](https://github.com/ftrauernicht/ha-automation-cookbook) | Home Assistant patterns written to be reused and read, one per folder, alongside sun-aware cover control that yields to manual override and time-in-zone statistics computed in SQL. |
 
 ### Tools
 
-- **Languages** — C#, TypeScript and JavaScript, Python, SQL, PowerShell, Bash
-- **.NET** — ASP.NET Core, Entity Framework Core, Avalonia, xUnit
-- **Data** — SQL Server, PostgreSQL
-- **Operations** — Docker, Kubernetes, cloud and on-premises deployments, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
-- **Practice** — automated and architecture testing, code review, penetration testing, threat modelling, technical documentation
+- **Languages**: C#, TypeScript and JavaScript, Python, SQL, PowerShell, Bash
+- **.NET**: ASP.NET Core, Entity Framework Core, Avalonia, xUnit
+- **Data**: SQL Server, PostgreSQL
+- **Operations**: Docker, Kubernetes, cloud and on-premises deployments, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
+- **Practice**: automated and architecture testing, code review, penetration testing, threat modelling, technical documentation
 
 ### Availability
 
-Remote by default, from East Frisia in northern Germany. I travel when a piece of work genuinely
+Remote by default, from East Frisia in northern Germany. I travel when a piece of work
 needs everyone in the same room, and I would rather make that call deliberately than out of
 habit. Open to conversations about senior engineering, architecture, and modernisation work.
 
