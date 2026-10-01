@@ -84,6 +84,7 @@ generalises: templates, patterns, and teaching material stripped of anything spe
 |---|---|
 | [dotnet-architecture-hexagonal-template](https://github.com/ftrauernicht/dotnet-architecture-hexagonal-template) | A .NET 10 setup taken far enough to be honest about the cost: the dependency rule enforced by architecture tests, xUnit v3 and Reqnroll, Central Package Management, and a five-stage CI/CD pipeline on SHA-pinned workflows. |
 | [javascript-course](https://github.com/ftrauernicht/javascript-course) | Project-based JavaScript course for beginners and apprentices, German and English side by side, building from the browser console up to a GUI calculator, quiz, and memory game. |
+| [csharp-oop-course](https://github.com/ftrauernicht/csharp-oop-course) | Project-based C# course on object-oriented programming, from a first class to inheritance, polymorphism and interfaces. German and English, every course project built and tested in CI. |
 | [raspi-google-drive-sync](https://github.com/ftrauernicht/raspi-google-drive-sync) | Unattended backup on deliberately weak hardware: read-only OAuth, copy instead of sync, a watchdog for stalled transfers, and a disk layout that stays readable when the machine running it is gone. |
 | [ha-automation-cookbook](https://github.com/ftrauernicht/ha-automation-cookbook) | Home Assistant patterns written to be reused and read, one per folder, alongside sun-aware cover control that yields to manual override and time-in-zone statistics computed in SQL. |
 
