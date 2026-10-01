@@ -1,6 +1,6 @@
 ## Frank Trauernicht
 
-**Senior software engineer at IT Titans GmbH · C# and .NET since 2011 · Aurich, Germany**
+**Senior software engineer at IT Titans GmbH · C# and .NET since 2011 · East Frisia, Germany**
 
 - Architecture and modernisation of long-lived line-of-business systems
 - Apprentice, engineer, head of a twelve-person development team
@@ -96,10 +96,10 @@ generalises: templates, patterns, and teaching material stripped of anything spe
 - **Operations**: Docker, Kubernetes, cloud and on-premises deployments, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
 - **Practice**: automated and architecture testing, code review, penetration testing, threat modelling, technical documentation
 
-### Availability
+### Working style
 
 Remote by default, from East Frisia in northern Germany. I travel when a piece of work
 needs everyone in the same room, and I would rather make that call deliberately than out of
-habit. Open to conversations about senior engineering, architecture, and modernisation work.
+habit.
 
 [LinkedIn](https://www.linkedin.com/in/frank-trauernicht/) · [XING](https://www.xing.com/profile/Frank_Trauernicht/)
