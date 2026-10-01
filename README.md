@@ -1,6 +1,6 @@
 ## Frank Trauernicht
 
-**Senior software engineer · C# and .NET since 2011 · Aurich, Germany**
+**Senior software engineer at IT Titans GmbH · C# and .NET since 2011 · Aurich, Germany**
 
 - Architecture and modernisation of long-lived line-of-business systems
 - Apprentice, engineer, head of a twelve-person development team
