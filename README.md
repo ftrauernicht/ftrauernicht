@@ -64,9 +64,9 @@ adversarially is the fastest way I know to stop writing certain classes of bug i
 
 ### AI-assisted development
 
-The question worth answering about LLM tooling is not whether a model can write the change; it
-is what has to be true before that change is allowed to merge: architecture tests, coverage
-gates, secret scanning, a diff a human can still review. Automation that cannot be verified is
+With LLM tooling, whether a model can write the change is the easy part. The question is what
+has to be true before that change is allowed to merge: architecture tests, coverage gates,
+secret scanning, a diff a human can still review. Automation that cannot be verified is
 not automation.
 
 ### Teaching
