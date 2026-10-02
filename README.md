@@ -5,7 +5,7 @@
 - Architecture and modernisation of long-lived line-of-business systems
 - Apprentice, engineer, head of a twelve-person development team
 - Seven years running a software company of my own
-- Cloud and on-premises, containers, CI/CD, security reviews and penetration testing
+- Cloud and on-premises, containers, CI/CD, security reviews
 - Remote by default, from East Frisia in northern Germany
 
 Today that means greenfield services, long-lived systems that have to move onto current
@@ -58,7 +58,7 @@ make those failure modes visible where a generously provisioned environment hide
 
 ### Security
 
-Penetration testing and security reviews of applications, including mobile, that I did not write
+Security reviews of applications, including mobile, that I did not write
 myself, plus tooling that scans for privacy and GDPR exposure. Reviewing other people's software
 adversarially is the fastest way I know to stop writing certain classes of bug in my own.
 
@@ -94,7 +94,7 @@ generalises: templates, patterns, and teaching material stripped of anything spe
 - **.NET**: ASP.NET Core, Entity Framework Core, Avalonia, xUnit
 - **Data**: SQL Server, PostgreSQL
 - **Operations**: Docker, Kubernetes, cloud and on-premises deployments, Linux and Windows Server, GitHub Actions, Azure DevOps Pipelines
-- **Practice**: automated and architecture testing, code review, penetration testing, threat modelling, technical documentation
+- **Practice**: automated and architecture testing, code review, security reviews, threat modelling, technical documentation
 
 ### Working style
 
