@@ -3,7 +3,7 @@
 **Senior software engineer at IT Titans GmbH · C# and .NET since 2011 · East Frisia, Germany**
 
 - Architecture and modernisation of long-lived line-of-business systems
-- Apprentice, engineer, head of a twelve-person development team
+- Apprentice, engineer, head of a development team of up to twelve
 - Seven years running a software company of my own
 - Cloud and on-premises, containers, CI/CD, security reviews
 - Remote by default, from East Frisia in northern Germany
