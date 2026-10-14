@@ -1,0 +1,13 @@
+# Eine Zeile je Repository, durch Tabulatoren getrennt:
+#   Name <TAB> Untertitel <TAB> Fussnote
+# Erzeugen mit: bash render.sh
+#
+# Die sechs Karten unterhalb der ersten wurden abgelesen, nachdem sie schon
+# veroeffentlicht waren; der Generator entstand erst danach.
+java-games-course	Project-based Java course built around seven games, from tic-tac-toe to Flappy Bird	German and English  ·  nothing installed but the JDK
+csharp-oop-course	Project-based C# course on object-oriented programming, from a first class to interfaces	German and English  ·  every project built and tested in CI
+javascript-course	Project-based JavaScript course, from the browser console to a memory game	German and English  ·  for beginners and apprentices
+fachinformatiker-anwendungsentwicklung	Exam preparation for application developers: chapters, diagrams, exam questions, cheat sheets	German and English  ·  CC BY-SA 4.0
+dotnet-architecture-hexagonal-template	A .NET 10 starter with the dependency rule enforced by architecture tests	.NET 10  ·  xUnit  ·  Reqnroll  ·  GitHub Actions
+raspi-google-drive-sync	Self-healing Google Drive backup on a Raspberry Pi, with a real stall watchdog	rclone  ·  mergerfs  ·  systemd
+ha-automation-cookbook	Copy-pasteable Home Assistant automation patterns, one per folder	Home Assistant  ·  YAML
