@@ -4,6 +4,7 @@
 #
 # Die sechs Karten unterhalb der ersten wurden abgelesen, nachdem sie schon
 # veroeffentlicht waren; der Generator entstand erst danach.
+csharp-deep-dive-exercises	Twelve C# exercises around an animal shelter: equality, your own dictionary, LINQ under the hood	German and English  ·  240 tests in the sample solution
 java-games-course	Project-based Java course built around seven games, from tic-tac-toe to Flappy Bird	German and English  ·  nothing installed but the JDK
 csharp-oop-course	Project-based C# course on object-oriented programming, from a first class to interfaces	German and English  ·  every project built and tested in CI
 javascript-course	Project-based JavaScript course, from the browser console to a memory game	German and English  ·  for beginners and apprentices
