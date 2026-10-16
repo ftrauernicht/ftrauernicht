@@ -20,6 +20,12 @@ bash render.sh
 Cards land in `cards/`. The generator refuses a subtitle that needs more than two
 lines rather than quietly overflowing into the rule below it.
 
+Pushing the row is enough on its own. `.github/workflows/social-preview.yml` renders
+every card whenever `cards.tsv`, the generator or this script changes, and commits
+back whatever came out different. Running `render.sh` yourself is still the quicker
+route when you want the PNG in your hand straight away, which you do for the upload
+below.
+
 ## Putting it on GitHub
 
 By hand, and there is no way around it: **GitHub has no API for the social

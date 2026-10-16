@@ -1,0 +1,71 @@
+name: Social preview cards
+
+# The cards are generated from cards.tsv, and until now that meant remembering to run
+# render.sh afterwards. A row added without a render leaves a repository pointing at a
+# card that was never made, and nobody finds out until somebody pastes the link
+# somewhere. So the render happens where the row is added.
+#
+# Uploading a card to a repository stays manual, because GitHub has no API for the
+# social preview image. tools/social-preview/README.md says where that button is.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - tools/social-preview/cards.tsv
+      - tools/social-preview/SocialPreview.java
+      - tools/social-preview/render.sh
+      - .github/workflows/social-preview.yml
+  workflow_dispatch: {}
+
+# The job writes the rendered cards back, so it needs more than a read.
+permissions:
+  contents: write
+
+# Two runs rendering into the same branch would race each other.
+concurrency:
+  group: social-preview
+  cancel-in-progress: false
+
+jobs:
+  render:
+    name: Render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up the JDK
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Render every card
+        run: bash tools/social-preview/render.sh
+
+      - name: Commit the cards that changed
+        run: |
+          set -euo pipefail
+
+          # Private repositories here commit under the noreply address and never under
+          # whatever the global git config holds. A run that writes history follows the
+          # same rule, or the commit shows up unattributed on the profile.
+          git config user.name "Frank Trauernicht"
+          git config user.email "ftrauernicht@users.noreply.github.com"
+
+          # Only the cards. The compiled class the render leaves behind is ignored in
+          # that folder already, and nothing else in the tree is this job's business.
+          git add tools/social-preview/cards
+
+          if git diff --cached --quiet; then
+            echo "Every card already matches cards.tsv. Nothing to commit."
+            exit 0
+          fi
+
+          git diff --cached --name-only | sed 's|^|  |'
+          git commit -m "chore: render the social preview cards"
+
+          # This push changes only files under cards/, and the trigger above does not
+          # watch that folder, so it cannot set the workflow off again.
+          git push
