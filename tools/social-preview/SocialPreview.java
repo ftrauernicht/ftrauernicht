@@ -3,6 +3,8 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.font.FontRenderContext;
+import java.awt.GraphicsEnvironment;
+import java.util.Arrays;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
@@ -63,6 +65,12 @@ public final class SocialPreview {
             System.exit(2);
         }
         System.setProperty("java.awt.headless", "true");
+
+        // Georgia and Segoe UI ship with Windows and with nothing else. Java does not
+        // complain when a family is missing; it quietly hands back a default face, and
+        // the card then comes out in the wrong typeface with different line breaks and
+        // a different title size. That is invisible until the cards sit side by side.
+        requireFonts(TITLE_FACE, TEXT_FACE);
 
         BufferedImage img = new BufferedImage(W, H, BufferedImage.TYPE_INT_RGB);
         Graphics2D g = img.createGraphics();
@@ -164,5 +172,20 @@ public final class SocialPreview {
             out.add(line.toString());
         }
         return out;
+    }
+
+    /** Stops rather than silently substituting a face the machine does not have. */
+    static void requireFonts(String... faces) {
+        List<String> have = Arrays.asList(GraphicsEnvironment
+                .getLocalGraphicsEnvironment().getAvailableFontFamilyNames());
+        for (String face : faces) {
+            if (!have.contains(face)) {
+                System.err.println("Missing font: " + face
+                        + ". The cards are rendered on a machine that has it, which in"
+                        + " practice means Windows. Rendering here would produce a card"
+                        + " in a different typeface without saying so.");
+                System.exit(3);
+            }
+        }
     }
 }

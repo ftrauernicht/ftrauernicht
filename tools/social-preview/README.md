@@ -20,11 +20,17 @@ bash render.sh
 Cards land in `cards/`. The generator refuses a subtitle that needs more than two
 lines rather than quietly overflowing into the rule below it.
 
-Pushing the row is enough on its own. `.github/workflows/social-preview.yml` renders
-every card whenever `cards.tsv`, the generator or this script changes, and commits
-back whatever came out different. Running `render.sh` yourself is still the quicker
-route when you want the PNG in your hand straight away, which you do for the upload
-below.
+**Render on a machine that has Georgia and Segoe UI**, which in practice means
+Windows. Both ship with Windows and with nothing else, and Java does not complain
+about a family it cannot find: it substitutes a default face, and the card comes out
+in the wrong typeface with different line breaks and a smaller title. A CI run on
+2026-10-16 rewrote all eight cards that way without a single warning. The generator
+now checks the fonts first and stops with exit code 3 instead.
+
+`.github/workflows/social-preview.yml` therefore does not render. It checks that the
+folder stays consistent: every row in `cards.tsv` has a card, every card has a row,
+and the generator still compiles. That catches the mistake that actually happens,
+which is a row added and the render forgotten.
 
 ## Putting it on GitHub
 

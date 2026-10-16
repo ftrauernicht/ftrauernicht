@@ -1,35 +1,35 @@
 name: Social preview cards
 
-# The cards are generated from cards.tsv, and until now that meant remembering to run
-# render.sh afterwards. A row added without a render leaves a repository pointing at a
-# card that was never made, and nobody finds out until somebody pastes the link
-# somewhere. So the render happens where the row is added.
+# The cards cannot be rendered here, and that is not a gap in the runner. The design
+# asks for Georgia and Segoe UI, both of which ship with Windows and with nothing else,
+# and Java does not complain about a missing family: it hands back a default face. A run
+# on 2026-10-16 did exactly that and rewrote all eight cards in the wrong typeface, with
+# different line breaks and a smaller title, without a single warning. SocialPreview now
+# refuses to render when a face is missing, so it cannot happen again unnoticed.
 #
-# Uploading a card to a repository stays manual, because GitHub has no API for the
-# social preview image. tools/social-preview/README.md says where that button is.
+# What a runner can check is that the folder stays consistent: every row in cards.tsv has
+# a card, every card has a row, and the generator still compiles. That is the mistake that
+# actually happens, which is a row added and the render forgotten.
 
 on:
   push:
     branches: [main]
     paths:
-      - tools/social-preview/cards.tsv
-      - tools/social-preview/SocialPreview.java
-      - tools/social-preview/render.sh
+      - tools/social-preview/**
+      - .github/workflows/social-preview.yml
+  pull_request:
+    paths:
+      - tools/social-preview/**
       - .github/workflows/social-preview.yml
   workflow_dispatch: {}
 
-# The job writes the rendered cards back, so it needs more than a read.
+# Reading is all this needs. Nothing here writes to the repository.
 permissions:
-  contents: write
-
-# Two runs rendering into the same branch would race each other.
-concurrency:
-  group: social-preview
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  render:
-    name: Render
+  check:
+    name: Check the cards
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,31 +41,33 @@ jobs:
           distribution: temurin
           java-version: "21"
 
-      - name: Render every card
-        run: bash tools/social-preview/render.sh
+      - name: The generator still compiles
+        run: javac --release 21 -d "$(mktemp -d)" tools/social-preview/SocialPreview.java
 
-      - name: Commit the cards that changed
+      - name: Every row has a card and every card has a row
         run: |
-          set -euo pipefail
+          # No -e: both halves run, so one pass names every problem rather than the first.
+          set -uo pipefail
+          cd tools/social-preview
+          status=0
 
-          # Private repositories here commit under the noreply address and never under
-          # whatever the global git config holds. A run that writes history follows the
-          # same rule, or the commit shows up unattributed on the profile.
-          git config user.name "Frank Trauernicht"
-          git config user.email "ftrauernicht@users.noreply.github.com"
+          while IFS=$'\t' read -r name rest; do
+            case "$name" in ''|'#'*) continue ;; esac
+            if [ ! -f "cards/$name.png" ]; then
+              echo "::error::cards.tsv has a row for $name but cards/$name.png is missing. Run render.sh on a machine that has Georgia and Segoe UI."
+              status=1
+            fi
+          done < cards.tsv
 
-          # Only the cards. The compiled class the render leaves behind is ignored in
-          # that folder already, and nothing else in the tree is this job's business.
-          git add tools/social-preview/cards
+          for f in cards/*.png; do
+            n=$(basename "$f" .png)
+            if ! cut -f1 cards.tsv | grep -qxF "$n"; then
+              echo "::error::cards/$n.png has no row in cards.tsv, so nothing says what it is for."
+              status=1
+            fi
+          done
 
-          if git diff --cached --quiet; then
-            echo "Every card already matches cards.tsv. Nothing to commit."
-            exit 0
+          if [ "$status" -eq 0 ]; then
+            echo "Every row has a card and every card has a row."
           fi
-
-          git diff --cached --name-only | sed 's|^|  |'
-          git commit -m "chore: render the social preview cards"
-
-          # This push changes only files under cards/, and the trigger above does not
-          # watch that folder, so it cannot set the workflow off again.
-          git push
+          exit $status
