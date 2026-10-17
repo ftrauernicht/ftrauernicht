@@ -7,8 +7,8 @@ systems stay unnamed.
 ## Where things stood
 
 Position reports from ship traffic across a bounded area, arriving continuously, and readings
-from sensors alongside them. Millions of messages a month, with no single day standing out.
-The stream does not ask whether anyone is watching, and the body of data it leaves behind
+from sensors alongside them. Four to five million records a month, with no single day standing
+out. The stream does not ask whether anyone is watching, and the body of data it leaves behind
 grows every day.
 
 Four things had to be possible:
