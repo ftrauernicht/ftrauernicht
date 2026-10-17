@@ -34,6 +34,8 @@ organisation can operate at three in the morning. I choose on that basis and wri
 reasoning down, because the next engineer has to be able to disagree with it. Having spent
 enough time in codebases where that reasoning was never written down, I take modernisation
 to be [archaeology first and engineering second](https://frank-trauernicht.de/en/#architecture).
+What the archaeology consists of is written up in
+[The first weeks in a system nobody can explain](notes/first-weeks-in-an-unfamiliar-system.md).
 
 ### Two of those decisions, written up
 
