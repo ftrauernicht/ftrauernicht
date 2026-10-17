@@ -35,6 +35,17 @@ reasoning down, because the next engineer has to be able to disagree with it. Ha
 enough time in codebases where that reasoning was never written down, I take modernisation
 to be [archaeology first and engineering second](https://frank-trauernicht.de/en/#architecture).
 
+### Two of those decisions, written up
+
+Claiming to write the reasoning down is cheap, so here are two pieces of it. Both concern a
+system that was not allowed to stop while it changed, both name the alternative that was
+rejected, and both say what the decision cost rather than only what it bought.
+
+| Case study | The decision |
+|---|---|
+| [From desktop to web, without stopping the business](case-studies/desktop-to-web.md) | Several desktop applications on a platform with no future, a team that had never built a web interface, and nothing technically fixed. I replaced the user interface and left the core alone, and paid for that later. |
+| [One data stream and four questions asked of it](case-studies/one-stream-four-questions.md) | A continuous stream of position and sensor data behind four demands that pull apart. Raw data kept whole, an aggregated layer beside it, and two states that have to agree from then on. |
+
 ### Running systems
 
 Some of what I build runs in the cloud, some on customer infrastructure: regulated
